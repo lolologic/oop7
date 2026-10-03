@@ -7,6 +7,6 @@ class GameObject {
   GameObject({required this.name, required this.posX, required this.posY});
 
   void despawn() {
-
+    print('$name wurde entfernt.');
   }
 }

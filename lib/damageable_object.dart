@@ -5,9 +5,9 @@ abstract class DamageableObject extends GameObject {
   int _health;
 
   DamageableObject({
-    required super.name, 
-    required super.posX, 
-    required super.posY, 
+    required super.name,
+    required super.posX,
+    required super.posY,
     this.maxHealth = 100,
   }) : _health = maxHealth;
 
@@ -23,7 +23,11 @@ abstract class DamageableObject extends GameObject {
     }
   }
 
-  void onKilled() {
+  void restoreHealth() {
+    _health = maxHealth;
+  }
 
+  void onKilled() {
+    despawn();
   }
 }
